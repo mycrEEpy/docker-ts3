@@ -35,10 +35,10 @@ EXPOSE  $TS3_PORT_DEFAULT \
 VOLUME $TS3_HOME
 
 # Use TS3 home as workdir
-WORKDIR $TS3_HOME
+WORKDIR $TS3_HOME/teamspeak3-server_linux-amd64
 
 # Set user for running TS3
 USER $TS3_USER
 
 # Start TS3 minimal runscript when running a container without parameters
-CMD $TS3_HOME/ts3server_minimal_runscript.sh >> $TS3_HOME/runscript.log
+CMD $TS3_HOME/teamspeak3-server_linux-amd64/ts3server_minimal_runscript.sh >> $TS3_HOME/runscript.log
