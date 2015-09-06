@@ -11,7 +11,7 @@ ENV TS3_HOME=/ts3 \
 
 # Update via yum to latest versions and install wget
 RUN yum update -y && \
-    yum install wget.x86_64
+    yum install wget.x86_64 -y
 
 # Add user to run ts3 and create directories for files
 RUN useradd -m $TS3_USER && \
